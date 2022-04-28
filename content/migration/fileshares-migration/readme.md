@@ -7,8 +7,8 @@
 
 Agenda
 1. [Azure Files Migration Overview](./overview.md)
-2. [Scan File Shares](./scan.md)
-3. [Assess and Select Target File Share Service](./assess.md)
+2. [Assess and Select Target File Share Service](./assess.md)
+3. [Scan File Shares](./scan.md)
 4. [Design and Build Landing Zone](./landingzone.md)
 5. [Assess and Select Migration Tooling](./replication.md)
 6. [Migration Testing](./testing.md)

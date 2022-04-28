@@ -1,13 +1,11 @@
 # Azure Files Migration Overview
 
-#### [prev](./readme.md) | [home](./readme.md)  | [next](./scan.md)
-
-## [**Scan File Shares Milestone**](./scan.md)
-During this phase discovery tooling is ran to inventory file shares and its clients. The scan results are reviewed to decide on migration readiness and understand dependencies which will help build the migration groups.
+#### [prev](./readme.md) | [home](./readme.md)  | [next](./assess.md)
 
 ## [**Assess and Select Target File Share Service Milestone**](./assess.md) 
 During this phase, the target File Share Service options are reviewed and one or more target File share services are chosen to host the migrated file shares.
-
+## [**Scan File Shares Milestone**](./scan.md)
+During this phase discovery tooling is ran to inventory file shares and its clients. The scan results are reviewed to decide on migration readiness and understand dependencies which will help build the migration groups.
 ## [**Design and Build the Landing Zone Milestone**](./landingzone.md) 
 During this phase, typically lenghty, a design document for the Landing Zone (networking, governance, and operations) is developed and signed off. Build of the landing zone is performed based on this design.
 

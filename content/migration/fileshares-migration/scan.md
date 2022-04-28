@@ -1,20 +1,26 @@
 # Milestone: Scan File Shares
 
-#### [prev](./overview.md) | [home](./readme.md)  | [next](./assess.md)
+#### [prev](./scan.md) | [home](./readme.md)  | [next](./landingzone.md)
 
 The following content can be used as a checklist to incorporate within your migration project plan to ensure best practices.
+## **1 Discover Source Shares** 
 
-
-## **1 Inventory and Assess Tooling Planning and Implementation** 
-
-### &nbsp;&nbsp;&nbsp;&nbsp;1.1\.  Plan for scanning agents/appliances that will be needed to discover the state. 
+### 1.1\. Choose between automated vs. manual approach
+[Discovery](https://docs.microsoft.com/en-us/azure/storage/common/storage-migration-overview?toc=/azure/storage/blobs/toc.json#discovery-phase) phase automated approaches encompass wizard driven tools which auto discover and inventory source file share environments. A manual approach refers to building custom scripts. 
  
+### 1.2\. Review if automated discovery tool supports desired sources and destinations
 
+- [Storage Migration Service](https://docs.microsoft.com/en-us/windows-server/storage/storage-migration-service/overview#how-the-migration-process-works)
+- [File Sync Service and Third Party ISVs](https://docs.microsoft.com/en-us/azure/storage/solution-integration/validated-partners/data-management/migration-tools-comparison?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json#supported-azure-services)
+- [NetApps Cloud Sync](https://docs.netapp.com/us-en/cloud-manager-sync/reference-supported-relationships.html)
+### 1.3\. Review if automated discovery tool provides desired assessments and reporting
+- [Storage Migration Service](https://docs.microsoft.com/en-us/windows-server/storage/storage-migration-service/migrate-data#step-1-create-a-job-and-inventory-your-servers-to-figure-out-what-to-migrate)
+- [File Sync Service and Third Party ISVs](https://docs.microsoft.com/en-us/azure/storage/solution-integration/validated-partners/data-management/migration-tools-comparison#assessment-and-reporting)
+- [NetApps Cloud Sync](https://docs.netapp.com/us-en/cloud-manager-sync/task-managing-reports.html#creating-reports)
 
-### &nbsp;&nbsp;&nbsp;&nbsp;1.2\. Implement scanning agents/appliances.
+## **2 Discover File Shares Dependencies** 
 
-### &nbsp;&nbsp;&nbsp;&nbsp;1.3\. Ensure scanning agents/appliances have been running for at least 7 days or more for accuracy of collected data.
+### 2.1\.Choose between automated vs. manual approach to discover clients
+Azure Migrate or other third party tools can be used to discover dependent client machines based on TCP connections on standard ports such as 445, 139, 2049, etc. 
 
-## **2 Scan Document** 
-
-### &nbsp;&nbsp;&nbsp;&nbsp;2.1\. Is the scan completed? If so, collect scan and upload to internal tracking systems.
+An in depth review can be found in our [FTA Live for Server Migration](./server-migration/assess.md) content. 
