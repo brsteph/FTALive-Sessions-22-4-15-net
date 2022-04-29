@@ -6,7 +6,7 @@ The overall Landing Zone architecture and implementation will be defined by your
 ## Azure Landing Architecture
 It's important to plan for the overall Landing Zone architecture and implementation before focusing on the File Shares architecture requirements.
 
-Guidance can be found in our [FTA Live for Server Migration](./server-migration/landingzone.md) content. 
+Guidance can be found in our [FTA Live for Server Migration](../server-migration/landingzone.md) content. 
 ## File Shares Architecture
 The following architecture options exists for the various file share services and use cases:
 ### **NetApps Architecture**

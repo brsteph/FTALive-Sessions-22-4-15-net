@@ -24,4 +24,4 @@ The following content can be used as a checklist to incorporate within your migr
 ### Choose between automated vs. manual approach to discover clients
 Azure Migrate or other third party tools can be used to discover dependent client machines based on TCP connections on standard ports such as 445, 139, 2049, etc. 
 
-Guidance can be found in our [FTA Live for Server Migration](./server-migration/assess.md) content. 
+Guidance can be found in our [FTA Live for Server Migration](../server-migration/assess.md) content. 

@@ -14,7 +14,7 @@ Review this [table](https://docs.microsoft.com/en-us/azure/cloud-adoption-framew
 
 Review this [decision tree](https://docs.microsoft.com/en-us/azure/storage/common/storage-migration-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json#choose-a-target-storage-service) to help choose between Azure Files, Azure NetApps, and Blob Storage.
 
-### Deeper Review to help choose between Blob, Azure Files and Net Apps
+### Deeper Review to help choose between Blob, Azure Files and NetApps
 
 Validate your selection via the below comparison tables to help make the final decision on a target file share service:
 - [Table Comparison for Blob Storage, Azure Files and NetApps](https://docs.microsoft.com/en-us/azure/storage/common/nfs-comparison?toc=/azure/storage/files/toc.json)
