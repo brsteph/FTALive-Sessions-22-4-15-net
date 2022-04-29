@@ -31,11 +31,11 @@ In order to prepare the business and its stakeholders for the migration activiti
 
 
 - **Post-Migration Tasks:**
-- Update any existing CMDB
-- Validate VM monitoring via new or existing service.
-- Validate VM backup via new or existing service.
-- Tag Azure resources.
-- Postmortem and Learnings
+    - Update any existing CMDB
+    - Validate VM monitoring via new or existing service.
+    - Validate VM backup via new or existing service.
+    - Tag Azure resources.
+    - Postmortem and Learnings
 
 ## **Migration Plan Definition**
 Consider key activities such as resync and final switchover as described in the suggested [Migration Phase activities](https://docs.microsoft.com/en-us/azure/storage/common/storage-migration-overview?toc=/azure/storage/blobs/toc.json#migration-phase) for each migration group in the migration wave.
