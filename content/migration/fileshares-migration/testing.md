@@ -32,8 +32,8 @@ In order to prepare the business and its stakeholders for the migration activiti
 
 - **Post-Migration Tasks:**
     - Update any existing CMDB
-    - Validate VM monitoring via new or existing service.
-    - Validate VM backup via new or existing service.
+    - Validate file share monitoring via new or existing service.
+    - Validate file share backup via new or existing service.
     - Tag Azure resources.
     - Postmortem and Learnings
 
