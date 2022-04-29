@@ -2,23 +2,29 @@
 
 #### [prev](./assess.md) | [home](./readme.md)  | [next](./replication.md)
 
-The Landing Zone architecture and implementation will be defined by your specific company requirements. There is no Landing Zone architecture which is one-size fits all. The following content can be used as a starting point to incorporate within your migration project plan.
+The overall Landing Zone architecture and implementation will be defined by your specific company requirements. Specific requirements to host File Shares infrastructure will need to be defined based on the underlying Landing Zone design.
+## Azure Landing Architecture
+It's important to plan for the overall Landing Zone architecture and implementation before focusing on the File Shares architecture requirements.
 
-**CAF Reference:** [Ready - Landing Zone Design Areas](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-areas)
+Guidance can be found in our [FTA Live for Server Migration](./server-migration/landingzone.md) content. 
+## File Shares Architecture
+The following architecture options exists for the various file share services and use cases:
+### **NetApps Architecture**
+- [Storage Hierarchy of Azure NetApps Files](https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-understand-storage-hierarchy)
+-  [Guidelines for Azure NetApp Files network planning](https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-network-topologies)
+- [VDI Specific Architecture](https://docs.microsoft.com/en-us/azure/architecture/example-scenario/wvd/windows-virtual-desktop)
 
-## Azure Landing Zone Design Areas
+### **Azure Files Architecture**
+- [Planning for an Azure Files Deployment](https://docs.microsoft.com/en-us/azure/storage/files/storage-files-planning)
+- [Simple Hybrid Architecture](https://docs.microsoft.com/en-us/azure/architecture/hybrid/azure-file-share)
+- [Advanced Hybrid Architecture](https://docs.microsoft.com/en-us/azure/architecture/example-scenario/hybrid/azure-files-on-premises-authentication)
+- [VDI Specific Architecture](https://docs.microsoft.com/en-us/azure/architecture/example-scenario/wvd/windows-virtual-desktop)
+### **Azure Files Sync Service Architecture**
+- [Planning for an Azure Files Sync Service Deployment](https://docs.microsoft.com/en-us/azure/storage/file-sync/file-sync-planning)
+- [Simple Hybrid Architecture](https://docs.microsoft.com/en-us/azure/architecture/hybrid/hybrid-file-services)
+- [Advanced Hybrid Architecture](https://docs.microsoft.com/en-us/azure/architecture/hybrid/azure-files-private)
+- [VDI Specific Architecture](https://docs.microsoft.com/en-us/azure/architecture/example-scenario/hybrid/hybrid-file-share-dr-remote-local-branch-workers)
 
-* Azure billing and Active Directory tenant
-* Identity and access management
-* Network topology and connectivity
-* Resource organization
-* Security
-* Management
-* Governance
-* Platform automation and DevOps
+### **Windows Server File Share on Azure Architecture**
 
-[This page](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/implementation-options) describes some of the implementation options for landing zones and the variables that might drive your decision.
-
-## Review an Azure Landing Zone
-
-An existing landing zone can be reviewed using the [Azure Review Checklists](https://github.com/Azure/review-checklists). The Review Checklists help facilitate design reviews to help track improvements and recommendations across a variety of checklists including landing zones, Azure Virtual Desktop, security, and more. The latest spreadsheet can be [downloaded here](https://github.com/Azure/review-checklists/releases/latest/download/review_checklist.xlsm).
+- [TBD]()

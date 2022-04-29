@@ -3,18 +3,18 @@
 
 The following content can be used as a checklist to incorporate within your migration project plan to ensure best practices.
 
-## **1 Choose a Target File Share Service** 
-### 1.1\.  Choose between IaaS vs. PaaS file shares.
+## **Choose a Target File Share Service** 
+### Choose between IaaS vs. PaaS file shares.
 
 Review this [table](https://docs.microsoft.com/en-us/azure/virtual-desktop/store-fslogix-profile#azure-platform-details) to help identify your initial file share cloud platform model. 
-### 1.2\.  Validate best fit scenario 
+### Validate best fit scenario 
 
 Review this [table](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/considerations/storage-options?toc=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Farchitecture%2Ftoc.json&bc=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Farchitecture%2Fbread%2Ftoc.json#file-and-object-storage-scenarios) to help identify your initial scenario and suggested PaaS file share service.
-### 1.3\.  Initial review for protocol, performance and limits
+### Initial review for protocol, performance and limits
 
 Review this [decision tree](https://docs.microsoft.com/en-us/azure/storage/common/storage-migration-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json#choose-a-target-storage-service) to help choose between Azure Files, Azure NetApps, and Blob Storage.
 
-### 1.4\.  Deeper Review to help choose between Blob, Azure Files and Net Apps
+### Deeper Review to help choose between Blob, Azure Files and Net Apps
 
 Validate your selection via the below comparison tables to help make the final decision on a target file share service:
 - [Table Comparison for Blob Storage, Azure Files and NetApps](https://docs.microsoft.com/en-us/azure/storage/common/nfs-comparison?toc=/azure/storage/files/toc.json)

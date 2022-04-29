@@ -3,24 +3,24 @@
 #### [prev](./scan.md) | [home](./readme.md)  | [next](./landingzone.md)
 
 The following content can be used as a checklist to incorporate within your migration project plan to ensure best practices.
-## **1 Discover Source Shares** 
+## **Discover Source Shares** 
 
-### 1.1\. Choose between automated vs. manual approach
+### Choose between automated vs. manual approach
 [Discovery](https://docs.microsoft.com/en-us/azure/storage/common/storage-migration-overview?toc=/azure/storage/blobs/toc.json#discovery-phase) phase automated approaches encompass wizard driven tools which auto discover and inventory source file share environments. A manual approach refers to building custom scripts. 
  
-### 1.2\. Review if automated discovery tool supports desired sources and destinations
+### Review if automated discovery tool supports desired sources and destinations
 
 - [Storage Migration Service](https://docs.microsoft.com/en-us/windows-server/storage/storage-migration-service/overview#how-the-migration-process-works)
 - [File Sync Service and Third Party ISVs](https://docs.microsoft.com/en-us/azure/storage/solution-integration/validated-partners/data-management/migration-tools-comparison?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json#supported-azure-services)
 - [NetApps Cloud Sync](https://docs.netapp.com/us-en/cloud-manager-sync/reference-supported-relationships.html)
-### 1.3\. Review if automated discovery tool provides desired assessments and reporting
+### Review if automated discovery tool provides desired assessments and reporting
 - [Storage Migration Service](https://docs.microsoft.com/en-us/windows-server/storage/storage-migration-service/migrate-data#step-1-create-a-job-and-inventory-your-servers-to-figure-out-what-to-migrate)
 - [File Sync Service and Third Party ISVs](https://docs.microsoft.com/en-us/azure/storage/solution-integration/validated-partners/data-management/migration-tools-comparison#assessment-and-reporting)
 - [NetApps Cloud Sync](https://docs.netapp.com/us-en/cloud-manager-sync/task-managing-reports.html#creating-reports)
 
-## **2 Discover File Shares Dependencies** 
+## **Discover File Shares Dependencies**
 
-### 2.1\.Choose between automated vs. manual approach to discover clients
+### Choose between automated vs. manual approach to discover clients
 Azure Migrate or other third party tools can be used to discover dependent client machines based on TCP connections on standard ports such as 445, 139, 2049, etc. 
 
-An in depth review can be found in our [FTA Live for Server Migration](./server-migration/assess.md) content. 
+Guidance can be found in our [FTA Live for Server Migration](./server-migration/assess.md) content. 

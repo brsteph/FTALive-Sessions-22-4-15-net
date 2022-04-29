@@ -3,40 +3,30 @@
 #### [prev](./landingzone.md) | [home](./readme.md)  | [next](./testing.md)
 
 The following content can be used as a checklist to incorporate within your migration project plan to ensure best practices.
+## **Data Transfer** 
 
-**CAF Reference:** [Adopt - Replicate Assets](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/migrate/migration-considerations/migrate/replicate)
-
-## **1 Capacity Planning for cores quotas** 
-
-### &nbsp;&nbsp;&nbsp;&nbsp;1.1\. Ensure subscription quotas has been increased for target VM SKU sizes and Azure resources needed to be created for the specific region.
-
-## **2 Replication Tools Planning and Implementation** 
-### &nbsp;&nbsp;&nbsp;&nbsp;2.1\.  Plan for replication agents/appliances that will be needed to replicate the migration waves. 
-
-![Concept Diagram](./png/replication-workflow.PNG)
-
-- &nbsp;&nbsp;&nbsp;&nbsp;Reference Link A: https://docs.microsoft.com/en-us/azure/migrate/migrate-support-matrix-vmware-migration#vm-requirements-agentless
-- &nbsp;&nbsp;&nbsp;&nbsp;Reference Link B: https://docs.microsoft.com/en-us/azure/migrate/tutorial-migrate-vmware-agent
-- &nbsp;&nbsp;&nbsp;&nbsp;Reference Link C: https://docs.microsoft.com/en-us/azure/migrate/tutorial-migrate-vmware-powershell
-- &nbsp;&nbsp;&nbsp;&nbsp;Reference Link D: https://docs.microsoft.com/en-us/azure/migrate/tutorial-migrate-hyper-v
-- &nbsp;&nbsp;&nbsp;&nbsp;Reference Link E: 
-    - &nbsp;&nbsp;&nbsp;&nbsp;Physical/Other hypervisors: https://docs.microsoft.com/en-us/azure/migrate/tutorial-migrate-physical-virtual-machines
-    - &nbsp;&nbsp;&nbsp;&nbsp;AWS: https://docs.microsoft.com/en-us/azure/migrate/tutorial-migrate-aws-virtual-machines
-    - &nbsp;&nbsp;&nbsp;&nbsp;GCP: https://docs.microsoft.com/en-us/azure/migrate/tutorial-migrate-gcp-virtual-machines
-
-### &nbsp;&nbsp;&nbsp;&nbsp;2.2\. Ensure hypervisor infrastructure has enough resources to handle additional load from replication appliances.
-
-## **3 Replication** 
-
-### &nbsp;&nbsp;&nbsp;&nbsp;3.1\. Enable initial replication for a subset of the migration waves based on available bandwidth.
-- &nbsp;&nbsp;&nbsp;&nbsp;Initial replication takes more bandwidth vs. delta replications.
-- &nbsp;&nbsp;&nbsp;&nbsp;For each server configured for initial replication, monitor replication progress closely until successful before enabling initial replication for remaining servers.
-- &nbsp;&nbsp;&nbsp;&nbsp;For each server with ongoing replication, monitor replication closely before enabling initial replication for remaining servers.
-
-### &nbsp;&nbsp;&nbsp;&nbsp;3.2\. Based on the observed initial and ongoing replications, tune your replication plans based on the below considerations:
-
-- &nbsp;&nbsp;&nbsp;&nbsp;How much bandwidth is needed and available for replications?
-- &nbsp;&nbsp;&nbsp;&nbsp;How many VMs can be initially replicated at the same time?
-- &nbsp;&nbsp;&nbsp;&nbsp;How many VMs can be left replicating at the same time?
-- &nbsp;&nbsp;&nbsp;&nbsp;Is there a need to throttle replication within the replication appliance? 
+### Choose between Offline vs. Online data transfer
+Decide on [Data Transfer Methodology](https://docs.microsoft.com/en-us/azure/storage/common/storage-migration-overview?toc=/azure/storage/blobs/toc.json#select-the-migration-method) based on the following [graph](https://docs.microsoft.com/en-us/azure/storage/common/storage-choose-data-transfer-solution) and extend based on the following scenarios:
+- [Large dataset, low network bandwidth](https://docs.microsoft.com/en-us/azure/storage/common/storage-solution-large-dataset-low-network?toc=/azure/storage/blobs/toc.json)
+- [Large dataset, moderate to high network bandwidth](https://docs.microsoft.com/en-us/azure/storage/common/storage-solution-large-dataset-moderate-high-network?toc=/azure/storage/blobs/toc.json)
+- [Small dataset, low to moderate network bandwidth](https://docs.microsoft.com/en-us/azure/storage/common/storage-solution-small-dataset-low-moderate-network?toc=/azure/storage/blobs/toc.json)
  
+## **Migration Tooling** 
+
+### Choose between automated vs. manual approach
+Automated approaches encompass wizard driven tools which migrate at scale file share environments. A manual approach refers to building custom scripts to migrate specific file shares.
+
+- [Manual Approach Comparison](https://docs.microsoft.com/en-us/azure/storage/common/storage-solution-periodic-data-transfer?toc=/azure/storage/blobs/toc.json#scriptedprogrammatic-network-data-transfer)
+ 
+### Review if automated migration tool supports desired sources and destinations
+
+- [Storage Migration Service](https://docs.microsoft.com/en-us/windows-server/storage/storage-migration-service/overview#how-the-migration-process-works)
+- [File Sync Service and Third Party ISVs](https://docs.microsoft.com/en-us/azure/storage/solution-integration/validated-partners/data-management/migration-tools-comparison?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json#supported-azure-services)
+- [NetApps Cloud Sync](https://docs.netapp.com/us-en/cloud-manager-sync/reference-supported-relationships.html)
+
+## **Migrate File Shares Dependencies**
+### Choose between automated vs. manual approach to migrate clients
+Azure Migrate, a redeploy approach or other third party tools can be used to migrate dependent client machines such as Applications hosted on Windows and Linux servers consuming the file shares.
+
+Guidance can be found in our [FTA Live for Server Migration](./server-migration/replication.md) content. 
+
