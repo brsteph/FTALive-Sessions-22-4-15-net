@@ -29,5 +29,5 @@ Automated approaches encompass wizard driven tools which migrate at scale file s
 ### Choose between automated vs. manual approach to migrate clients
 Azure Migrate, a redeploy approach or other third party tools can be used to migrate dependent client machines such as Applications hosted on Windows and Linux servers consuming the file shares.
 
-Guidance can be found in our [FTA Live for Server Migration](./server-migration/replication.md) content. 
+Guidance can be found in our [FTA Live for Server Migration](../server-migration/replication.md) content. 
 
