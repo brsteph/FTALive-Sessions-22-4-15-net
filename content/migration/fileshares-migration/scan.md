@@ -16,6 +16,7 @@ The following content can be used as a checklist to incorporate within your migr
 ### Review if automated discovery tool provides desired assessments and reporting
 - [Storage Migration Service](https://docs.microsoft.com/en-us/windows-server/storage/storage-migration-service/migrate-data#step-1-create-a-job-and-inventory-your-servers-to-figure-out-what-to-migrate)
 - [File Sync Service and Third Party ISVs](https://docs.microsoft.com/en-us/azure/storage/solution-integration/validated-partners/data-management/migration-tools-comparison#assessment-and-reporting)
+    - Consider the [File Migration Program](https://techcommunity.microsoft.com/t5/azure-storage-blog/migrate-the-critical-file-data-you-need-to-power-your/ba-p/3038751) to attain free licensing for selected ISVs
 - [NetApps Cloud Sync](https://docs.netapp.com/us-en/cloud-manager-sync/task-managing-reports.html#creating-reports)
 
 ## **Discover File Shares Dependencies**
